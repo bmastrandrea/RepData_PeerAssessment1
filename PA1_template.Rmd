@@ -34,12 +34,12 @@ sumTable <- aggregate(activity$steps ~ activity$date, FUN=sum, )
 colnames(sumTable)<- c("Date", "Steps")
 ```
 
-Crate a histogram of the total number of steps taken each day
+Create a histogram of the total number of steps taken each day
 ```{r histogramm, fig.height= 5}
 ## Creating the historgram of total steps per day
+par(mar = c(5,4,1,1), las=1)
 hist(sumTable$Steps, breaks=30, xlab="Steps per Day", ylab="Frequency", main = "Histogram of Daily Steps",  col="blue", lwd=1)
 ```
-
 Calculate and report the mean and median of the total number of steps taken per day
 
 ```{r}
